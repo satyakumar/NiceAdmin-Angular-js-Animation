@@ -1,0 +1,18 @@
+<section class="bk3 container">
+<form class="login-form">        
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <input type="text" class="form-control" placeholder="Username" autofocus ng-model="pinModel.place">
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" ng-click="pinModel.getPincode();">Search</button>
+        </div>
+      </form>
+	  <form class="login-form data-form" ng-hide="pinModel.dataForm">        
+        <div class="login-wrap" ng-if="pinModel.data">
+            {{pinModel.getCelsius(pinModel.data.main.temp)}}
+        </div>
+      </form>
+	  
+</section>

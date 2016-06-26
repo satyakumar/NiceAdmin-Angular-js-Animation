@@ -1,0 +1,25 @@
+<section class="wrapper">
+   <!--overview start-->
+   <div class="row">
+   <div class="col-lg-10">
+      Details for:- {{storyModel.id}}
+      <div class="panel panel-primary" ng-animate-ref="{{storyModel.id}}">
+         <div class="panel-heading">{{storyModel.title}}</div>
+         <div class="panel-content">
+            <div class="row">
+               <div class="col-md-2">
+                  <img ng-src="{{storyModel.image}}" class="img-rounded" style="width: 135px; height: 150px">
+               </div>
+               <div class="col-md-12">
+                  {{storyModel.story}}
+               </div>
+            </div>
+            <div class="row">
+               <div class="">
+                  Moral:- {{storyModel.moral}}
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>

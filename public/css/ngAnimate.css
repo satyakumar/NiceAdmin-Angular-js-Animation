@@ -1,0 +1,97 @@
+#sidebar.open-add ,
+#sidebar.open-remove {
+	transition: all .2s;
+}
+#sidebar.open-add-active {
+	margin-left: 0;
+	left: 0;
+}
+/********ng-outlet*************/
+ng-outlet.ng-enter,
+ng-outlet.ng-leave {
+	/*opacity: 0;*/
+	transition: opacity .3s;
+}
+/*ng-outlet.ng-enter-active {
+	opacity: 1;
+}*/
+ng-outlet.ng-leave-active {
+	opacity: 0;
+}
+ng-outlet,
+[ng-outlet] {
+	position: absolute;
+	width: 100%;
+}
+/********ng-outlet*************/
+/********ng-repeat*************/
+.stories.ng-enter,
+.stories.ng-leave {
+	transition: opacity .3s, margin-bottom .5s;
+}
+.stories.ng-enter,
+.stories.ng-leave-active {
+	opacity: 0;
+	margin-bottom: -188px;
+}
+.stories.ng-enter-active {
+	opacity: 1;
+	margin-bottom: 15px;
+}
+.ng-enter-stagger,
+.ng-leave-stagger {
+	transition-delay: .2s;
+	transition-duration: 0;
+}	
+/********ng-repeat*************/
+/********ng-show and ng-hide*************/
+#user-status.ng-hide-add,
+#user-status.ng-hide-remove {
+	transition: opacity 0.5s;
+}
+#user-status.ng-hide-add-active,
+#user-status.ng-hide-remove {
+	opacity: 0;
+}
+#user-status.ng-hide-remove-active {
+	opacity: 1;
+}
+/********ng-show and ng-hide*************/
+/********ngModel and ngMessages for Form Validation*************/  
+.form-control {
+	border-width: 2px;
+	transition: all .3s;
+}
+.form-control.ng-invalid {
+	color: #b94a48;
+	border-color: #b94a48;
+}
+.form-control.ng-touched {
+	color: #11E3B0;
+	border-color: #F1ED08;
+}
+ng-message.ng-enter {
+	opacity: 0;
+	margin-bottom: -52px;
+}
+ng-message.ng-enter-active,
+ng-message.ng-leave {
+	opacity: 1;
+	margin-bottom: 20px;
+}
+ng-message.ng-leave-active {
+	opacity: 0;
+	margin-bottom: -52px;
+}
+/********ngModel and ngMessages for Form Validation*************/ 
+/********Anchoring*************/ 
+.ng-anchor {
+	transition: all 3s;
+}
+.ng-anchor-out {
+	background: pink;
+}
+.ng-anchor-in {
+	background: #FAF899;
+}
+/********Anchoring*************/ 

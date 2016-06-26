@@ -1,0 +1,52 @@
+<section class="form bk2 container">
+   <form class="form-validate form-horizontal" id="feedback_form"  name="register">
+      <div class="form-group ">
+         <label for="cname" class="control-label col-lg-2">Full Name <span class="required">*</span></label>
+         <div class="col-lg-10">
+            <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required />
+         </div>
+      </div>
+      <div class="form-group ">
+         <label for="cemail" class="control-label col-lg-2">E-Mail <span class="required">*</span></label>
+         <div class="col-lg-10">
+            <input class="form-control" id="cemail" type="email" name="email" required ng-model="email"/>
+         </div>
+      </div>
+      <!--<div ng-messages="email.$error">
+         <div class="alert alert-danger" ng-message="required">please enter email
+         </div>
+         <div class="alert alert-danger" ng-message="email">please enter valid email
+         </div>
+         </div>-->
+      <div class="form-group">
+         <ng-messages for="register.email.$error" class="col-md-6 col-md-offset-3 pull-right">
+            <ng-message when="email" class="alert alert-danger">Validated...please enter a valid email</ng-message>
+            <ng-message ng-if="register.email.$touched" when="required" class="alert alert-info">Required...please enter email</ng-message>
+         </ng-messages>
+      </div>
+      <div class="form-group">
+         <label for="curl" class="control-label col-lg-2">Website</label>
+         <div class="col-lg-10">
+            <input class="form-control " id="curl" type="url" name="url" />
+         </div>
+      </div>
+      <div class="form-group ">
+         <label for="cname" class="control-label col-lg-2">Subject <span class="required">*</span></label>
+         <div class="col-lg-10">
+            <input class="form-control" id="subject" name="subject" minlength="5" type="text" required />
+         </div>
+      </div>
+      <div class="form-group ">
+         <label for="ccomment" class="control-label col-lg-2">Feedback</label>
+         <div class="col-lg-10">
+            <textarea class="form-control " id="ccomment" name="comment" required></textarea>
+         </div>
+      </div>
+      <div class="form-group">
+         <div class="col-lg-offset-2 col-lg-10">
+            <button class="btn btn-primary" type="submit">Save</button>
+            <button class="btn btn-default" type="button">Cancel</button>
+         </div>
+      </div>
+   </form>
+</section>
